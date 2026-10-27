@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrarse - Escape del Aula</title>
+</head>
+<body>
+    <h1>Crear una cuenta nueva</h1>
+    
+    <!-- Si hay un error (como que el usuario ya existe), lo mostramos acá -->
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %} {# Esto es obligatorio en Django para seguridad #}
+        <label>Usuario:</label>
+        <input type="text" name="username" required>
+        <br><br>
+        <label>Contraseña:</label>
+        <input type="password" name="password" required>
+        <br><br>
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <br>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

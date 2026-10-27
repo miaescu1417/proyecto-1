@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios - Escape del Aula</title>
+</head>
+<body>
+    <h1>Lista de Sobrevivientes (Usuarios Registrados)</h1>
+
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{ usuario.username }}</li>
+        {% empty %}
+            <li>No hay usuarios registrados todavía.</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

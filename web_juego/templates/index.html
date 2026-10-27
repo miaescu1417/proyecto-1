@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Escape del Aula</title>
+</head>
+<body>
+    <!-- ACÁ ARRIBA METEMOS EL MENÚ -->
+    <nav>
+        {% if user.is_authenticated %}
+            <p>Hola, <strong>{{ user.username }}</strong>! | 
+            <a href="/logout/">Cerrar sesión</a></p>
+        {% else %}
+            <a href="/login/">Iniciar sesión</a> | 
+            <a href="/registrar/">Registrarse</a>
+        {% endif %}
+        | <a href="/usuarios/">Ver usuarios registrados</a>
+    </nav>
+    <hr>
+
+    <h1>🎮 Escape del Aula</h1>
+
+    <h2>Sobre Escape del Aula</h2>
+    <h3>¿De qué trata?</h3>
+    <p>Escape del Aula es un videojuego 2D de tipo endless runner en el que el jugador controla a un estudiante que intenta escapar de un día caótico de escuela. El objetivo es avanzar lo máximo posible, esquivando obstáculos y superando un puntaje cada vez más alto.</p>
+    <p>La idea nació tomando como referencia juegos simples y adictivos como el famoso dinosaurio de Google Chrome, pero llevándolo a una situación mucho más cercana a nuestra vida cotidiana: la escuela.</p>
+
+    <h3>💡 ¿Cómo nació la idea?</h3>
+    <p>El proyecto comenzó como una propuesta para crear un videojuego que fuera sencillo de desarrollar, pero que al mismo tiempo tuviera una identidad propia.</p>
+    <p>En lugar de intentar hacer un juego enorme con cientos de niveles o mecánicas complicadas, decidimos centrarnos en una idea simple: correr, esquivar y sobrevivir.</p>
+    <p>A partir de ahí empezamos a imaginar qué cosas podían aparecer durante la carrera: objetos de la escuela, situaciones exageradas, profesores, obstáculos y diferentes elementos que hicieran que escapar del aula fuera cada vez más difícil.</p>
+
+    <h3>🛠️ ¿Cómo fue creado?</h3>
+    <p>El desarrollo comenzó con la planificación de la idea y de las mecánicas principales. Después pasamos a trabajar con Godot, un motor de desarrollo de videojuegos que nos permitió construir las escenas, incorporar imágenes, programar el movimiento del personaje y crear las diferentes interacciones del juego.</p>
+    <p>El desarrollo fue progresivo. Primero se trabajó en la estructura del proyecto y el menú principal, después en el escenario y los recursos visuales, y posteriormente en el movimiento del personaje y las mecánicas del juego.</p>
+    <p>Una parte importante del proceso fue aprender mientras desarrollábamos. Muchas cosas no funcionaron correctamente al primer intento, por lo que tuvimos que probar diferentes soluciones, corregir errores y modificar algunas ideas originales.</p>
+
+    <h3>🎨 El apartado visual</h3>
+    <p>Para crear la identidad visual de Escape del Aula buscamos un estilo 2D colorido, divertido y relacionado con el ambiente escolar.</p>
+    <p>Algunos recursos gráficos fueron creados utilizando herramientas de generación de imágenes y posteriormente incorporados al proyecto. Esto permitió experimentar con diferentes estilos y adaptar los recursos a las necesidades del videojuego.</p>
+    <p>La intención no era solamente que el juego funcionara, sino que también tuviera una estética reconocible y coherente.</p>
+
+    <h3>👩‍💻 Sobre la creadora</h3>
+    <p><strong>Mia</strong></p>
+    <p>Soy la creadora y desarrolladora de Escape del Aula. El proyecto nació como un trabajo escolar, pero terminó convirtiéndose también en una oportunidad para aprender sobre desarrollo de videojuegos.</p>
+    <p>Antes de comenzar el proyecto no tenía experiencia trabajando con Godot, por lo que gran parte del desarrollo consistió en aprender desde cero cómo funcionan las escenas, los nodos, los scripts y las diferentes herramientas del motor.</p>
+    <p>Durante el proceso también aprendí que crear un videojuego no consiste solamente en programar. Hay que pensar en el diseño, los gráficos, la jugabilidad, los sonidos, la organización del proyecto y, sobre todo, en probar constantemente lo que se está haciendo.</p>
+
+    <h3>📓 Detrás del desarrollo</h3>
+    <p>Escape del Aula todavía es un proyecto en desarrollo. Por eso, algunas de las cosas que aparecen en el juego fueron cambiando durante el proceso.</p>
+    <p>La idea original no fue exactamente igual a la versión que estamos construyendo actualmente. A medida que aprendimos nuevas herramientas aparecieron nuevas posibilidades, y algunos problemas técnicos nos obligaron a buscar otras formas de hacer las cosas.</p>
+    <p>Esta página también forma parte del proyecto porque permite mostrar no solamente el resultado final, sino todo lo que hubo detrás para llegar hasta él.</p>
+
+    <h3>“Un juego puede empezar con una idea simple. Lo difícil es convertir esa idea en algo que realmente puedas jugar.”</h3>
+</body>
+</html>
